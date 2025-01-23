@@ -1,0 +1,49 @@
+.main_outer_topnavbar_container .topnavbar_container{
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    position: fixed;
+    top: 0;
+    /* left: 80px; */
+    z-index: 999;
+    margin-bottom: 20px;
+}
+
+.main_outer_topnavbar_container .topnavbar_container .topnavbar_leftisde_container input{
+    min-width: 450px;
+    background-color: #eaf1fb;
+    border: 1px solid rgb(212, 212, 212);
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.main_outer_topnavbar_container .topnavbar_container .topnavbar_rightside_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_outer_topnavbar_container .topnavbar_container .topnavbar_rightside_container .notfications_icon_container .notifications_icon_image{
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.main_outer_topnavbar_container .topnavbar_container .topnavbar_rightside_container .settings_icon_container .settings_icon_image{
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.main_outer_topnavbar_container .topnavbar_container .topnavbar_rightside_container .other_apps_icon_container .other_apps_icon_image{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+}

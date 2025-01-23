@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+/* .main_outer_dashboard_page_container .dashboard_page_container .sidenavbar_container */
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container{
+    margin-left: 260px;
+    margin-right: 10px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .topnavbar_container{
+    margin-bottom: 1rem;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container h2{
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .extra_functionality_btns_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .extra_functionality_btns_container .extra_btns_leftside .add_new_idea_btn{
+    background: none;
+    border: none;
+    background-color: #0b57d0;
+    padding: 12px 17px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 200;
+    font-size: 13px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .extra_functionality_btns_container .extra_btns_rightside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .extra_functionality_btns_container .extra_btns_rightside .list_view_btn{
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 13px;
+    margin-right: 10px;
+    font-size: 10px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .extra_functionality_btns_container .extra_btns_rightside .list_view_btn .list_view_icon_btn{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .extra_functionality_btns_container .extra_btns_rightside .grid_view_btn{
+    border: none;
+    background: none;
+    border: 1px solid #000;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-right: 10px;
+    font-weight: 300;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .extra_functionality_btns_container .extra_btns_rightside .grid_view_btn .grid_view_icon_btn{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+/* rough ideas container starts here */
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .rough_ideas_container{
+    background-color: #f2f4f9;
+    height: 100%;
+    padding: 10px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .rough_ideas_container .container_header_title{
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* single idea stylings start here */
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .rough_ideas_container .single_idea_container{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 14px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .rough_ideas_container .single_idea_container:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .rough_ideas_container .single_idea_container .single_idea_toppart .idea_title{
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .rough_ideas_container .single_idea_container .single_idea_bottompart .idea_description{
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .rough_ideas_container .single_idea_container .single_idea_bottompart .idea_categories_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .rough_ideas_container .single_idea_container .single_idea_bottompart .idea_categories_container .single_category{
+    border: 1px solid rgb(212, 212, 212);
+    padding: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 300;
+    border-radius: 14px;
+}
+/* single idea stylings ends here */
+
+/* rough ideas ends here */
+
+/* concept ideas container starts here */
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .concept_ideas_container{
+    background-color: #f2f4f9;
+    height: 100%;
+    padding: 10px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .concept_ideas_container .container_header_title {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .concept_ideas_container .single_idea_container{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 14px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .concept_ideas_container .single_idea_container:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .concept_ideas_container .single_idea_container .single_idea_toppart .idea_title{
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .concept_ideas_container .single_idea_container .single_idea_bottompart .idea_description{
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .concept_ideas_container .single_idea_container .single_idea_bottompart .idea_categories_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .concept_ideas_container .single_idea_container .single_idea_bottompart .idea_categories_container .single_category{
+    border: 1px solid rgb(212, 212, 212);
+    padding: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 300;
+    border-radius: 14px;
+}
+
+/* concept ideas container ends here */
+
+
+/* ready ideas container starts here */
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .ready_ideas_container{
+    background-color: #f2f4f9;
+    height: 100%;
+    padding: 10px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .ready_ideas_container .container_header_title {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .ready_ideas_container .single_idea_container{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 14px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .ready_ideas_container .single_idea_container:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .ready_ideas_container .single_idea_container .single_idea_toppart .idea_title{
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .ready_ideas_container .single_idea_container .single_idea_bottompart .idea_description{
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .ready_ideas_container .single_idea_container .single_idea_bottompart .idea_categories_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.main_outer_dashboard_page_container .dashboard_page_container .actual_outer_content_container .user_content_ideas_container .ready_ideas_container .single_idea_container .single_idea_bottompart .idea_categories_container .single_category{
+    border: 1px solid rgb(212, 212, 212);
+    padding: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 300;
+    border-radius: 14px;
+}
+
+/* ready ideas container ends here */
