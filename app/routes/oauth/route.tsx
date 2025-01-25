@@ -9,8 +9,12 @@ interface LoaderData{
 
 export async function loader({request}: LoaderFunctionArgs){
     const url = new URL(request.url);
-    const accessToken = url.searchParams.get("access_token");
-    const stateValue = url.searchParams.get("state");
+    const hash = url.hash.substring(1);
+
+    const params = new URLSearchParams(hash);
+
+    const accessToken = params.get("access_token");
+    const stateValue = params.get("state");
 
     return{
         "access_token": accessToken,
@@ -23,7 +27,7 @@ export default function OAuthPage(){
 
     console.log("access token is: ", loaderData.access_token);
     console.log("state value is: ", loaderData.state);
-    
+
     return(
         <div className="main_outer_oauth_page_container">
             <div className="oauth_page_container">
