@@ -10,56 +10,33 @@ import TwitterIcon from "~/images/twitter.png";
 import PinterestIcon from "~/images/pinterest.png";
 import TestImage1 from "~/images/current_user_profile.png";
 import { ActionFunctionArgs } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 
-export async function action({ request }: ActionFunctionArgs ) {
-    const data = await request.formData();
-    const actionType = data.get("actionType");
+interface LoaderData{
+    appId: string,
+    message: string
+}
 
-    switch(actionType){
-        case "connectFacebook":
-            async function connectToFacebook(){
-                console.log("This button when clicked connects us to facebook");
-            };
+// export async function action({ request }: ActionFunctionArgs ) {
 
-            connectToFacebook();
-            return{
-                "message": "Facebook button clicked"
-            };
-
-        case "connectInstagram":
-            async function connectInstagram(){
-                console.log("This function will connect the user's instagram account");
-            };
-            connectInstagram();
-            return{
-                "message": "Instagram button clicked"
-            };
-
-        case "connectLinkedin":
-            async function connectLinkedin(){
-                console.log("This function when callled will connect the user's linkedin account");
-            }
-            connectLinkedin();
-            return{
-                "message": "Linkedin button clicked"
-            };
-
-        default: {
-            console.log("Invalid choice has been slected");
-        }
-    };
-};
+// };
 
 export async function loader(){
     return {
-        "app id": process.env.appId,
-        "message back: ": "Hello there is this working"
+        "appId": process.env.appId || "No app id this is not working",
+        "message": "Hello there is this working"
     };
 }
 
 export default function SocialProfilesPage(){
+    const data = useLoaderData<LoaderData>();
     const openFbLoginDialog = () => {
-        alert("Clicking this button will open the login dialog for facebook");
+        const redirectUri = "https://47social-media-remix.vercel.app/oauth";
+        const uniqueStateValue = Math.random().toString(36).substring(2, 40);
+        const permissions = "pages_manage_engagement,pages_manage_metadata,pages_manage_posts,pages_messaging,pages_read_engagement,pages_read_user_content,pages_show_list,publish_video,read_insights,instagram_basic";
+        const appId = data.appId;
+        const apiUrl = `https://www.facebook.com/v21.0/dialog/oauth?client_id=${appId}&redirect_uri=${redirectUri}&state=${uniqueStateValue}&scope=${permissions}&response_type=token`
+        window.open(apiUrl, "_blank");
     };
 
     return(
@@ -86,10 +63,7 @@ export default function SocialProfilesPage(){
                                         <h3 className="social_profile_title">Facebook</h3>
                                     </div>
                                     <div className="socail_profile_toppart_rightside">
-                                        <form method="post">
-                                            <input type="hidden" name="actionType" value="connectFacebook" />
-                                            <button className="connect_profile_button" type="submit">+ Connect</button>
-                                        </form>
+                                        <button className="connect_profile_button" onClick={openFbLoginDialog} type="submit">+ Connect</button>
                                     </div>
                                 </div>
                                 <div className="single_social_profile_bottompart">
@@ -122,10 +96,7 @@ export default function SocialProfilesPage(){
                                         <h3 className="social_profile_title">Instagram</h3>
                                     </div>
                                     <div className="socail_profile_toppart_rightside">
-                                        <form method="post">
-                                            <input type="hidden" name="actionType" value="connectInstagram" />
-                                            <button className="connect_profile_button" type="submit">+ Connect</button>
-                                        </form>
+                                        <button className="connect_profile_button" type="submit">+ Connect</button>
                                     </div>
                                 </div>
                                 <div className="single_social_profile_bottompart">
@@ -158,10 +129,7 @@ export default function SocialProfilesPage(){
                                         <h3 className="social_profile_title">Linkedin</h3>
                                     </div>
                                     <div className="socail_profile_toppart_rightside">
-                                        <form method="post">
-                                            <input type="hidden" name="actionType" value="connectLinkedin" />
-                                            <button className="connect_profile_button" type="submit">+ Connect</button>
-                                        </form>
+                                        <button className="connect_profile_button" type="submit">+ Connect</button>
                                     </div>
                                 </div>
                                 <div className="single_social_profile_bottompart">
