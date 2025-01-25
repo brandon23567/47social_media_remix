@@ -33,7 +33,7 @@ export default function SocialProfilesPage(){
     const openFbLoginDialog = () => {
         const redirectUri = "https://47social-media-remix.vercel.app/oauth";
         const uniqueStateValue = Math.random().toString(36).substring(2, 40);
-        const permissions = "pages_events,pages_manage_engagement,pages_manage_metadata,pages_manage_posts,pages_messaging,pages_read_engagement,pages_read_user_content,pages_show_list,publish_video,read_insights,instagram_basic";
+        const permissions = "pages_manage_engagement,pages_manage_metadata,pages_manage_posts,pages_messaging,pages_read_engagement,pages_read_user_content,pages_show_list,publish_video,read_insights,instagram_basic";
         const appId = data.appId;
         const apiUrl = `https://www.facebook.com/v21.0/dialog/oauth?client_id=${appId}&redirect_uri=${redirectUri}&state=${uniqueStateValue}&scope=${permissions}&response_type=token`
         window.open(apiUrl, "_blank");
